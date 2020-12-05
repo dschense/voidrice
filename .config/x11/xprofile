@@ -18,3 +18,6 @@ unclutter &		# Remove mouse when idle
 pidof -s runit &&
 	pidof -s ! pidof -s pulseaudio >/dev/null 2>&1 &&
 	setsid -f pulseaudio --start --exit-idle-time=-1 >/dev/null 2>&1
+
+# Set Keyboard Layout
+setxkbmap -layout de -variant nodeadkeys
