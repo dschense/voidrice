@@ -49,7 +49,9 @@ set noshowcmd
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
-
+"Copy and paste key bindings:
+	vnoremap <C-c> "*y :let @+=@*<CR>
+	map <C-v> "+P
 " Nerd tree
 	map <leader>n :NERDTreeToggle<CR>
 	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
